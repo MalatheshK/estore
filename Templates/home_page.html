@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+
+
+{% for obj in obj %}
+
+<div class="container-fluid" style="width: 500px;;">
+ <div class="card" style="width: 500px;">
+    <img src="{{obj.prod_img.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">{{obj.prod_name}} - {{obj.prod_price}}</p>
+      <a class="btn btn-primary" href={% url 'buy_page' %} role="button">Buy</a>
+        </div>
+        </div>
+</div>
+<p></p>
+{% endfor %}
+
+{% endblock %}
